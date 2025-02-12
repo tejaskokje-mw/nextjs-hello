@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import tracker from '@middleware.io/agent-apm-nextjs';
 
 export default function Home() {
+  console.log("Middleware.io NextJS SDK: Loaded");
   tracker.info("Info Sample");
   tracker.warn("Warn Sample", {
       "tester": "Tejas",
