@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 // @ts-ignore
-import tracker from 'middleware.io/agent-apm-nextjs';
+import tracker from '@middleware.io/agent-apm-nextjs';
 
 export default function Home() {
   tracker.info("Info Sample");
   tracker.warn("Warn Sample", {
-      "tester": "Alex",
+      "tester": "Tejas",
   });
   tracker.debug("Debug Sample");
   tracker.error("Error Sample");
