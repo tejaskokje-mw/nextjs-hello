@@ -1,8 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+// @ts-ignore
+import tracker from 'middleware.io/agent-apm-nextjs';
 
 export default function Home() {
-
+  tracker.info("Info Sample");
+  tracker.warn("Warn Sample", {
+      "tester": "Alex",
+  });
+  tracker.debug("Debug Sample");
+  tracker.error("Error Sample");
   return (
     <div className={styles.page}>
       <main className={styles.main}>
